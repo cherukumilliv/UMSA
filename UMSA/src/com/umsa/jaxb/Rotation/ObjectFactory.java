@@ -6,7 +6,7 @@
 //
 
 
-package com.umsa.jaxb.Rotation;
+package com.umsa.jaxb.rotation;
 
 import javax.xml.bind.annotation.XmlRegistry;
 

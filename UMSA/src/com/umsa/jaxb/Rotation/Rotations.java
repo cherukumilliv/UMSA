@@ -6,7 +6,7 @@
 //
 
 
-package com.umsa.jaxb.Rotation;
+package com.umsa.jaxb.rotation;
 
 import java.math.BigInteger;
 import java.util.ArrayList;

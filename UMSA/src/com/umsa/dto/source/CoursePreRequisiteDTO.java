@@ -6,6 +6,7 @@ import com.umsa.interfaces.IDTO;
 
 public class CoursePreRequisiteDTO  implements IDTO {
 		private DTOList courseList = null;
+		// additional pre-requisite.
 		private String message = null;
 		
 		public DTOList getCourseList() {
