@@ -48,14 +48,20 @@ public class CourseAction extends Action {
 		try {
 			BusinessController controller = new BusinessController();
 			
-			ArrayList<IDTO> courseList = controller.getCourseDetails(new Logger());
+/*			ArrayList<IDTO> courseList = controller.getCourseDetailsFromDatabase(new Logger());
 			
 			CourseDTO currentCourse = (CourseDTO) courseList.get(0);
 			
 			System.out.println("Course Name : " + currentCourse.getCourseName());
 			System.out.println("Course Number : "  + currentCourse.getCourseNumber());
+*/			
+			Object obj = controller.getCourseDetailsUsingXML(new Logger());
+			Object obj1 = controller.getRotationDetailsUsingXML(new Logger());
+			Object obj2 = controller.getScheduleDetailsUsingXML(new Logger());
 			
-				
+			System.out.println(obj.toString());
+			
+			
 		}  catch (Exception e) {
 
 			// Report the error using the appropriate name and ID.

@@ -23,7 +23,8 @@ public interface IConstants
 	
 	public static final int TYPE_DB_CALLABLE = 0;
 	public static final int TYPE_DB_PREPARED = 1;
-	public static final String ROTATION_JAXB_PACKAGE = "com.umsa.jaxb.Rotation";
+	public static final String ROTATION_JAXB_PACKAGE = "com.umsa.jaxb.rotation";
 	public static final String COURSE_JAXB_PACKAGE = "com.umsa.jaxb.course";
+	public static final String SCHEDULE_JAXB_PACKAGE = "com.umsa.jaxb.schedule";
 	
 }

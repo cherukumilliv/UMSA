@@ -20,7 +20,7 @@ import com.umsa.jaxb.schedule.Schedule.ScheduledCourse;
 import com.umsa.jaxb.schedule.Schedule.ScheduledCourse.Session;
 import com.umsa.jaxb.schedule.Schedule.ScheduledCourse.Session.Course;
 
-public class ScheduleMapper implements IMapper{
+public class ScheduleJAXBMapper implements IMapper{
 
 	@Override
 	public Object mapFrom(Object dto) throws ExceptionMapper {
@@ -39,10 +39,10 @@ public class ScheduleMapper implements IMapper{
 		
 		for(int i = 0 ;scheduleContent != null && i < scheduleContent.size() ; i++)
 		{
-			ScheduleEntryDTO sedto = new ScheduleEntryDTO();
-			sdto.add(sedto);
 			if(scheduleContent.get(i) instanceof JAXBElement<?>)
 			{
+				ScheduleEntryDTO sedto = new ScheduleEntryDTO();
+				sdto.add(sedto);
 				JAXBElement<?> schCourseJaxb =(JAXBElement<?>)scheduleContent.get(i);
 				ScheduledCourse schCourse = (ScheduledCourse) schCourseJaxb.getValue();
 				
@@ -57,7 +57,7 @@ public class ScheduleMapper implements IMapper{
 				}
 			}
 		}
-		return schedule;
+		return sdto;
 	}
 
 	protected void setScheduleEntry(ScheduleEntryDTO sedto,JAXBElement<?> jaxElement)
@@ -118,7 +118,7 @@ public class ScheduleMapper implements IMapper{
 		}												
 		if("course_number".equalsIgnoreCase(schSessionCourseJAXElement.getName().getLocalPart()))
 		{
-			sessionCourseDTO.setCourseNumber(new BigInteger(schSessionCourseValObject.toString()));
+			sessionCourseDTO.setCourseNumber(schSessionCourseValObject.toString());
 		}												
 		if("course_name".equalsIgnoreCase(schSessionCourseJAXElement.getName().getLocalPart()))
 		{

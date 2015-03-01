@@ -28,7 +28,7 @@ public class CoursePreRequisiteDTO  implements IDTO {
 		public void add(String courseNumber , String subject)
 		{
 			CourseDTO course = new CourseDTO();
-			course.setCourseNumber(new BigInteger(courseNumber));
+			course.setCourseNumber(courseNumber);
 			course.setSubject(subject);
 			add(course);
 		}
