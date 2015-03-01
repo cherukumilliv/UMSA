@@ -1,0 +1,74 @@
+ul
+{
+    list-style-type: none;
+    margin-left: -30px;
+    margin-top:130px;
+    font-size: 15px;
+}
+#myIframe{
+    position: relative;
+    height: 80%;
+    width: 100%; 
+}
+
+a {
+	text-decoration: none;
+	cursor: pointer;
+}
+/* unvisited link */
+a:link {
+    color: #000000;
+}
+
+/* visited link */
+a:visited {
+    color: #000000;
+}
+
+/* mouse over link */
+a:hover {
+    color: #000000;
+    background-color: yellow;
+}
+
+/* selected link */
+a:active {
+    color: #000000;
+}
+
+#header {
+    background-color:maroon;
+    color:white;
+    text-align:center;
+    padding:5px;
+}
+#topmenu {
+    background-color:white;
+    color:black;
+    clear:both;
+    text-align:center;
+   padding:5px;
+   margin-left: 250px;	 	 
+}
+
+#sidebar {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:500px;
+    width:100px;
+    float:left;
+    padding:5px;    	      
+}
+#section {
+	width:1100px;
+    float:left;
+    padding:5px;	
+}
+#footer {
+    background-color:maroon;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	
+    font-size: 15px; 	 
+}
