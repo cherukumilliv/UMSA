@@ -21,7 +21,7 @@ import com.umsa.jaxb.schedule.Schedule;
 import com.umsa.jaxb.schedule.Schedule.ScheduledCourse;
 import com.umsa.jaxb.schedule.Schedule.ScheduledCourse.Session;
 import com.umsa.jaxb.schedule.Schedule.ScheduledCourse.Session.Course;
-import com.umsa.xml.parserer.XmlDomParser;
+import com.umsa.xml.parser.XmlDomParser;
 
 
 public class TestJaxb {
