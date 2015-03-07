@@ -18,7 +18,7 @@ import com.umsa.jaxb.course.Descriptions;
 import com.umsa.jaxb.rotation.Rotations;
 import com.umsa.jaxb.schedule.Schedule;
 import com.umsa.logger.Logger;
-import com.umsa.xml.parserer.XmlDomParser;
+import com.umsa.xml.parser.XmlDomParser;
 
 public class DAOJAXB {
 	
