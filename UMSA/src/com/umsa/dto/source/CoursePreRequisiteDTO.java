@@ -1,7 +1,5 @@
 package com.umsa.dto.source;
 
-import java.math.BigInteger;
-
 import com.umsa.interfaces.IDTO;
 
 public class CoursePreRequisiteDTO  implements IDTO {

@@ -1,7 +1,6 @@
 package com.umsa.mapper.jaxb;
 
 import java.io.Serializable;
-import java.math.BigInteger;
 import java.util.List;
 
 import javax.xml.bind.JAXBElement;

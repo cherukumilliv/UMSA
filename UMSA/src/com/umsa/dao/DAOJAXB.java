@@ -7,8 +7,8 @@ import javax.naming.InitialContext;
 import javax.naming.NamingException;
 import javax.xml.bind.Marshaller;
 
-import com.umsa.dao.dto.ResourceURLDTO;
 import com.umsa.databind.impl.DataBindJAXB;
+import com.umsa.dto.dao.ResourceURLDTO;
 import com.umsa.dto.source.DTOList;
 import com.umsa.dto.source.ScheduleDTO;
 import com.umsa.exception.ExceptionDAO;
@@ -152,7 +152,32 @@ public class DAOJAXB {
 				}
 			}
 		} catch (NamingException e) {
-			throw new ExceptionDAO(e);
+			String envStr = System.getProperty("PPURL");
+			if(envStr != null)
+			{
+				switch(resource)
+				{
+					case ResourceURLDTO.ROTATIONURL:{
+						returnURL = "http://comp.umsl.edu/~xml_data/Rotation.xml";
+						break;
+					}
+					case ResourceURLDTO.COURSEURL:{
+						returnURL = "http://comp.umsl.edu/~xml_data/Courses.xml";
+						break;
+					}
+					case ResourceURLDTO.BSCSURL:{
+						returnURL = "http://comp.umsl.edu/~xml_data/BSCSDegreeReq.xml";
+						break;
+					}
+					case ResourceURLDTO.SCHEDULEURL:{
+						returnURL = "http://comp.umsl.edu/~xml_data/Schedule.xml";
+						break;
+					}
+				}				
+			}
+			else{				
+				throw new ExceptionDAO(e);
+			}
 		}
 		return returnURL;
 	}

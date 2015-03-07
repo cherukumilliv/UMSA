@@ -27,4 +27,8 @@ public class DTOList {
 			returnValue = dtoList.get(index);
 		return returnValue;
 	}
+	public int size()
+	{
+		return (dtoList != null) ? dtoList.size() : 0;
+	}
 }

@@ -24,21 +24,17 @@
 		</init-param>
 		<load-on-startup>2</load-on-startup>
 	</servlet>
-	<!--  servlet>
+	<servlet>
 		<description></description>
 		<display-name>StartupServlet</display-name>
 		<servlet-name>StartupServlet</servlet-name>
-		<servlet-class>com.att.acsi.runtimeadmin.startup.StartupServlet</servlet-class>
+		<servlet-class>com.umsa.startup.servlet.StartupServlet</servlet-class>
 		<init-param>
 			<param-name>Authorization</param-name>
 			<param-value>auth.properties</param-value>
 		</init-param>		
-		<init-param>
-			<param-name>PropertiesFileName</param-name>
-			<param-value>rte.properties</param-value>
-		</init-param>
 		<load-on-startup>1</load-on-startup>
-	</servlet-->
+	</servlet>
 	<servlet-mapping>
 		<servlet-name>action</servlet-name>
 		<url-pattern>*.do</url-pattern>

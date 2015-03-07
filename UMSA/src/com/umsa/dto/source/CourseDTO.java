@@ -1,7 +1,5 @@
 package com.umsa.dto.source;
 
-import java.math.BigInteger;
-
 import com.umsa.interfaces.IDTO;
 
 public class CourseDTO implements IDTO{
@@ -11,6 +9,10 @@ public class CourseDTO implements IDTO{
 	private String credit;
 	private String subject = null;
 	private CoursePreRequisiteDTO preReqDTO = null;
+	
+	private boolean consented = false;
+	private boolean completed = false;
+	
 	
 	public CoursePreRequisiteDTO getPreReqDTO() {
 		return preReqDTO;
@@ -47,6 +49,18 @@ public class CourseDTO implements IDTO{
 	}
 	public void setSubject(String subject) {
 		this.subject = subject;
+	}
+	public boolean isConsented() {
+		return consented;
+	}
+	public void setConsented(boolean consented) {
+		this.consented = consented;
+	}
+	public boolean isCompleted() {
+		return completed;
+	}
+	public void setCompleted(boolean completed) {
+		this.completed = completed;
 	}
 }
 	
